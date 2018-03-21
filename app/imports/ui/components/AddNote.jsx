@@ -33,8 +33,8 @@ class AddNote extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { note, owner, contactID, createdAt } = data;
-    Notes.insert({ note, owner, contactID, createdAt }, this.insertCallback);
+    const { note, owner, contactId, createdAt } = data;
+    Notes.insert({ note, owner, contactId, createdAt }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
