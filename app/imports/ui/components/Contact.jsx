@@ -24,7 +24,7 @@ class Contact extends React.Component {
 
   /* When the delete button is clicked, remove the corresponding item from the collection. */
   onClick() {
-    Contacts.remove(this.props.contact._id, this.deleteCallback);
+    confirm(Contacts.remove(this.props.contact._id, this.deleteCallback));
   }
 
   render() {
