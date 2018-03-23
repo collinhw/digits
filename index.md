@@ -1,4 +1,4 @@
-<img src="doc/landing.png">
+<img src="doc/landing.PNG">
 
 Meteor-application-template-react is a sample Meteor 1.6 application that illustrates:
 
