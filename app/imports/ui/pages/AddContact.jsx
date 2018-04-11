@@ -34,9 +34,9 @@ class AddContact extends React.Component {
 
   /** On submit, insert the data. */
   submit(data) {
-    const { firstName, lastName, address, image, description } = data;
+    const { firstName, lastName, classStanding, image, coursesTaken } = data;
     const owner = Meteor.user().username;
-    Contacts.insert({ firstName, lastName, address, image, description, owner }, this.insertCallback);
+    Contacts.insert({ firstName, lastName, classStanding, image, coursesTaken, owner }, this.insertCallback);
   }
 
   /** Render the form. Use Uniforms: https://github.com/vazco/uniforms */
@@ -49,9 +49,9 @@ class AddContact extends React.Component {
               <Segment>
                 <TextField name='firstName'/>
                 <TextField name='lastName'/>
-                <TextField name='address'/>
+                <TextField name='classStanding'/>
                 <TextField name='image'/>
-                <LongTextField name='description'/>
+                <LongTextField name='coursesTaken'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' value='fakeuser@foo.com'/>

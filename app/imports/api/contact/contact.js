@@ -10,8 +10,8 @@ const ContactSchema = new SimpleSchema({
   firstName: String,
   lastName: String,
   image: String,
-  address: String,
-  description: String,
+  classStanding: String,
+  coursesTaken: String,
   owner: String,
   condition: {
     type: String,

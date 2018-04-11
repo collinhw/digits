@@ -17,8 +17,8 @@ class EditContact extends React.Component {
 
   /** On successful submit, insert the data. */
   submit(data) {
-    const { firstName, lastName, address, image, description, _id } = data;
-    Contacts.update(_id, { $set: { firstName, lastName, address, image, description } }, (error) => (error ?
+    const { firstName, lastName, classStanding, image, coursesTaken, _id } = data;
+    Contacts.update(_id, { $set: { firstName, lastName, classStanding, image, coursesTaken } }, (error) => (error ?
         Bert.alert({ type: 'danger', message: `Update failed: ${error.message}` }) :
         Bert.alert({ type: 'success', message: 'Update succeeded' })));
   }
@@ -38,9 +38,9 @@ class EditContact extends React.Component {
               <Segment>
                 <TextField name='firstName'/>
                 <TextField name='lastName'/>
-                <TextField name='address'/>
+                <TextField name='classStanding'/>
                 <TextField name='image'/>
-                <LongTextField name='description'/>
+                <LongTextField name='coursesTaken'/>
                 <SubmitField value='Submit'/>
                 <ErrorsField/>
                 <HiddenField name='owner' />

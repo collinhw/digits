@@ -36,10 +36,10 @@ class Contact extends React.Component {
               {this.props.contact.firstName} {this.props.contact.lastName}
             </Card.Header>
             <Card.Meta>
-              {this.props.contact.address}
+              {this.props.contact.classStanding}
             </Card.Meta>
             <Card.Description>
-              {this.props.contact.description}
+              {this.props.contact.coursesTaken}
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
